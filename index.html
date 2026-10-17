@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CEO 6</title>
+<style>
+:root{--bg:#fbd5e3;--card:#fff;--tx:#1a1d1f;--mu:#6b7378;--bd:#e2e5e7;--ac:#0f9484;--gr:#f0f1f2;--ok:#157a3a;--wa:#b7791f;--er:#c0392b;--bt:#16181a;--bk:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root[data-force]{--bg:#111314;--card:#1b1e20;--tx:#eceff1;--mu:#98a2a8;--bd:#2c3134;--ac:#2bb5a3;--gr:#25292c;--ok:#4cc27a;--wa:#e0a64a;--er:#ef7b6e;--bt:#eceff1;--bk:#111314;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111314;--card:#1b1e20;--tx:#eceff1;--mu:#98a2a8;--bd:#2c3134;--ac:#2bb5a3;--gr:#25292c;--ok:#4cc27a;--wa:#e0a64a;--er:#ef7b6e;--bt:#eceff1;--bk:#111314;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif;padding-bottom:96px;font-size:16px}
+main{max-width:640px;margin:0 auto;padding:14px}
+h1{font-size:20px;margin:6px 0 2px}h2{font-size:17px;margin:0 0 10px}
+.mu{color:var(--mu);font-size:13px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:14px;margin-bottom:12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.st{background:var(--gr);border-radius:12px;padding:12px}
+.st b{display:block;font-size:20px;margin-top:4px}
+.bar{height:10px;background:var(--gr);border-radius:9px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--ac);border-radius:9px}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:14px;margin-top:10px}
+.al{border-radius:12px;padding:10px 12px;margin-bottom:12px;font-size:14px}
+.al.w{background:rgba(224,166,74,.18);color:var(--wa)}.al.e{background:rgba(220,80,60,.16);color:var(--er)}.al.g{background:rgba(40,160,90,.15);color:var(--ok)}
+.cats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cat{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px;text-align:right;color:var(--tx);font:inherit;cursor:pointer;min-height:84px}
+.cat.on{border-color:var(--ac);background:var(--gr)}
+.cat span{font-size:22px;display:block}.cat small{color:var(--mu)}
+input,select,textarea{width:100%;font:inherit;color:var(--tx);background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:11px 12px;margin:4px 0 10px}
+label{font-size:14px;color:var(--mu)}
+#mon{display:block;width:100%;min-height:46px;-webkit-appearance:none;appearance:none;text-align:right;line-height:1.2}
+#lock{position:fixed;inset:0;background:var(--bg);z-index:30;display:flex;align-items:center;justify-content:center}
+.rd{display:flex;align-items:center;gap:8px;margin:6px 0;color:var(--tx);font-size:15px}.rd input{width:auto;margin:0}
+.btn{width:100%;background:var(--bt);color:var(--bk);border:0;border-radius:999px;padding:14px;font:inherit;font-weight:600;cursor:pointer}
+.btn.s{background:var(--gr);color:var(--tx);width:auto;padding:8px 14px;font-weight:400}
+.chip{display:inline-block;background:var(--gr);border-radius:999px;padding:5px 11px;margin:3px;font-size:13px}
+.tot{background:var(--gr);border-radius:12px;padding:12px;margin-bottom:10px}.tot b{display:block;font-size:22px;color:var(--ok)}
+.it{border-top:1px solid var(--bd);padding:10px 0;font-size:14px}.it:first-child{border-top:0}
+.it .t{display:flex;justify-content:space-between;gap:8px;font-weight:600}
+nav{position:fixed;inset:auto 0 0 0;background:var(--card);border-top:1px solid var(--bd);display:flex;justify-content:space-around;padding:8px 6px calc(8px + env(safe-area-inset-bottom,0px));z-index:5}
+nav button{background:none;border:0;color:var(--mu);font:inherit;font-size:12px;padding:4px 10px;cursor:pointer}
+nav button.on{color:var(--ac);font-weight:700}
+nav .add{background:var(--ac);color:#fff;border-radius:999px;font-size:15px;font-weight:700;padding:8px 18px}
+#sheet{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;z-index:9;overflow:auto}
+#sheet>div{background:var(--bg);max-width:640px;margin:0 auto;min-height:100%;padding:14px;padding-top:calc(14px + env(safe-area-inset-top,0px))}
+.hide{display:none}
+</style>
+</head>
+<body>
+<div id="lock"><div class="card" style="width:min(340px,90%)"><h1>🔒 CEO 6</h1><p class="mu">أدخل كلمة السر للدخول</p><input id="pw" type="password" inputmode="numeric" autocomplete="off" placeholder="كلمة السر"><div id="pe" class="mu" style="color:var(--er)"></div><button class="btn" id="pwb">دخول</button></div></div>
+<main>
+ <h1>🏠 CEO 6</h1>
+ <label>الشهر</label><input type="month" id="mon">
+ <section id="v-dash"></section>
+ <section id="v-cats" class="hide"></section>
+ <section id="v-list" class="hide"></section>
+</main>
+<nav>
+ <button data-v="dash" class="on">📊<br>اللوحة</button>
+ <button data-v="cats">🗂️<br>الأقسام</button>
+ <button class="add" id="addb">+ مصروف</button>
+ <button data-v="list">🧾<br>السجل</button>
+</nav>
+<div id="sheet"><div id="form"></div></div>
+<script>
+var KEY='homebudget1';
+var DEF=[
+['🛒','المواد الغذائية',['خضار وفاكهة','لحوم ودواجن','مخبوزات','بقالة']],
+['🏠','المواد المنزلية',['منظفات','أدوات مطبخ','أثاث وصيانة']],
+['💊','الأدوية والعلاج',['أدوية','دكتور الأسنان','كشف وتحاليل']],
+['🧴','المواد الصحية والعناية الشخصية',['شامبو وصابون','عناية بالبشرة','أدوات حلاقة']],
+['👕','الملابس والأحذية',['ملابس','أحذية']],
+['📚','القرطاسية والتعليم',['كتب ودفاتر','رسوم مدرسية','دروس']],
+['💡','الكهرباء والخدمات',['كهرباء','ماء','إنترنت','هاتف']],
+['🚗','المواصلات والسيارة',['وقود','صيانة السيارة','قطع غيار','ورشة']],
+['👨‍👩‍👧','احتياجات أفراد الأسرة',['الأطفال','الوالدين']],
+['📦','مشتريات متنوعة',[]]];
+var S=load();S.budget=3000;
+function load(){try{var r=localStorage.getItem(KEY);if(r)return JSON.parse(r)}catch(e){}
+ return {budget:3000,cats:DEF.map(function(c){return{i:c[0],n:c[1],s:c[2].slice()}}),exp:[],who:['مصروف مشترك للأسرة','الأب','الأم','الأبناء']}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function $(i){return document.getElementById(i)}
+function esc(t){var d=document.createElement('div');d.textContent=t==null?'':t;return d.innerHTML}
+function fmt(n){return Number(n||0).toLocaleString('en-US',{maximumFractionDigits:2})+' د.ل.'}
+function today(){var d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+var cur=today().slice(0,7),filt=-1,selCat=-1,view='dash';
+function tot(e){return (+e.q||0)*(+e.p||0)}
+function counted(e){return e.st!=='need'}
+function mSpent(m){return S.exp.reduce(function(a,e){return a+(e.d.indexOf(m)===0&&counted(e)?tot(e):0)},0)}
+function shift(m,k){var y=+m.slice(0,4),mo=+m.slice(5)+k;while(mo<1){mo+=12;y--}while(mo>12){mo-=12;y++}return y+'-'+String(mo).padStart(2,'0')}
+var MN=['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
+
+function dash(){
+ var sp=mSpent(cur),b=S.budget,rem=b-sp,pct=b?Math.round(sp/b*100):0,h='';
+ if(pct>=100)h+='<div class="al e">⚠️ تجاوزت الميزانية بمقدار '+fmt(sp-b)+'</div>';
+ else if(pct>=80)h+='<div class="al w">تنبيه: وصلت '+pct+'% من الميزانية، المتبقي '+fmt(rem)+'</div>';
+ h+='<div class="card"><h2>لوحة متابعة الميزانية</h2><p class="mu">الميزانية الشهرية ثابتة: '+fmt(b)+'</p>'
+ +'<div class="grid2"><div class="st"><span class="mu">إجمالي المصروف</span><b>'+fmt(sp)+'</b></div><div class="st"><span class="mu">المتبقي</span><b style="color:var(--'+(rem<0?'er':'ok')+')">'+fmt(rem)+'</b></div>'
+ +'<div class="st"><span class="mu">نسبة المصروف</span><b>'+pct+'%</b></div><div class="st"><span class="mu">الميزانية</span><b>'+fmt(b)+'</b></div></div>'
+ +'<div class="row"><span>المصروف من الميزانية</span><span>'+pct+'%</span></div><div class="bar"><i style="width:'+Math.min(pct,100)+'%;'+(pct>=100?'background:var(--er)':'')+'"></i></div></div>';
+ var by=S.cats.map(function(c,i){return{n:c.n,v:S.exp.reduce(function(a,e){return a+(e.c===i&&e.d.indexOf(cur)===0&&counted(e)?tot(e):0)},0)}}).filter(function(x){return x.v>0}).sort(function(a,b){return b.v-a.v});
+ h+='<div class="card"><h2>توزيع المصروفات حسب القسم</h2>';
+ if(!by.length)h+='<p class="mu">لا توجد مصروفات في هذا الشهر بعد.</p>';
+ by.forEach(function(x){h+='<div class="row"><span>'+esc(x.n)+'</span><span>'+fmt(x.v)+'</span></div><div class="bar"><i style="width:'+Math.round(x.v/by[0].v*100)+'%"></i></div>'});
+ h+='</div>';
+ var pm=shift(cur,-1),ps=mSpent(pm);
+ h+='<div class="card"><h2>مقارنة بالشهر السابق</h2>';
+ if(!ps)h+='<p class="mu">لا توجد بيانات للشهر السابق.</p>';
+ else h+='<p>شهر '+MN[+pm.slice(5)-1]+': صرفت '+fmt(ps)+' — '+(ps>b?'<b style="color:var(--er)">تجاوزت الميزانية</b>':'<b style="color:var(--ok)">التزمت بالميزانية</b>')+'</p><p class="mu">'+(sp>ps?'هذا الشهر أعلى بـ '+fmt(sp-ps):'هذا الشهر أقل بـ '+fmt(ps-sp))+'</p>';
+ h+='</div>';
+ var y=cur.slice(0,4),ms=[],best=-1;
+ for(var k=1;k<=12;k++){var m=y+'-'+String(k).padStart(2,'0'),v=mSpent(m);ms.push(v);if(v>0&&(best<0||v<ms[best]))best=k-1}
+ h+='<div class="card"><h2>تحليل سنة '+y+'</h2>';
+ if(best<0)h+='<p class="mu">سيظهر هنا أفضل شهر بعد تسجيل المصروفات.</p>';
+ else{h+='<p>🏆 أحسن شهر: <b>'+MN[best]+'</b> ('+fmt(ms[best])+')</p>';
+  ms.forEach(function(v,k){if(v>0)h+='<div class="row"><span>'+MN[k]+'</span><span style="color:var(--'+(v>b?'er':'ok')+')">'+fmt(v)+'</span></div><div class="bar"><i style="width:'+Math.min(100,Math.round(v/Math.max(b,v)*100))+'%;'+(v>b?'background:var(--er)':'')+'"></i></div>'})}
+ h+='</div><button class="btn s" id="demo">تحميل بيانات تجريبية</button> <button class="btn s" id="clr">مسح كل البيانات</button>';
+ $('v-dash').innerHTML=h;
+ $('demo').onclick=function(){var d=cur+'-';[[0,'خضار ولحم',750,'تم'],[2,'دواء',400,'تم'],[1,'منظفات',300,'تم'],[4,'ملابس',250,'تم'],[5,'دفاتر',150,'تم'],[7,'وقود',100,'تم']].forEach(function(r,i){S.exp.push({id:Date.now()+i,c:r[0],s:'',n:r[1],w:S.who[0],q:1,p:r[2],d:d+String(i+1).padStart(2,'0'),store:'',pri:'must',st:'paid',note:''})});save();draw()};
+ $('clr').onclick=function(){if(this.dataset.s){S.exp=[];save();draw()}else{this.dataset.s=1;this.textContent='اضغط مرة أخرى للتأكيد'}};
+}
+
+function cats(){
+ var h='<div class="card"><h2>أقسام المنظومة</h2><p class="mu">اختر أي قسم لرؤية تصنيفاته الفرعية.</p><div class="cats">';
+ S.cats.forEach(function(c,i){var v=S.exp.reduce(function(a,e){return a+(e.c===i&&e.d.indexOf(cur)===0&&counted(e)?tot(e):0)},0);
+  h+='<button class="cat'+(i===selCat?' on':'')+'" data-c="'+i+'"><span>'+c.i+'</span>'+esc(c.n)+'<br><small>'+fmt(v)+'</small></button>'});
+ h+='</div></div>';
+ if(selCat>=0){var c=S.cats[selCat];h+='<div class="card"><h2>'+c.i+' '+esc(c.n)+'</h2>';
+  c.s.forEach(function(s){h+='<span class="chip">'+esc(s)+'</span>'});
+  if(!c.s.length)h+='<p class="mu">لا توجد تصنيفات فرعية.</p>';
+  h+='<input id="ns" placeholder="تصنيف فرعي جديد (مثال: صيانة السيارة)"><button class="btn s" id="nsb">إضافة تصنيف</button> <button class="btn s" id="ae">+ مصروف في هذا القسم</button> <button class="btn s" id="ve">عرض مصروفاته</button></div>'}
+ h+='<div class="card"><h2>قسم جديد</h2><input id="nc" placeholder="اسم القسم"><button class="btn s" id="ncb">إضافة قسم</button></div>';
+ $('v-cats').innerHTML=h;
+ [].forEach.call(document.querySelectorAll('.cat'),function(b){b.onclick=function(){selCat=+b.dataset.c;cats()}});
+ if($('nsb')){$('nsb').onclick=function(){var v=$('ns').value.trim();if(v){S.cats[selCat].s.push(v);save();cats()}};
+  $('ae').onclick=function(){openForm(selCat)};$('ve').onclick=function(){filt=selCat;go('list')}}
+ $('ncb').onclick=function(){var v=$('nc').value.trim();if(v){S.cats.push({i:'🔖',n:v,s:[]});save();cats()}};
+}
+
+function list(){
+ var h='<div class="card"><h2>سجل المصروفات</h2><select id="fc"><option value="-1">كل الأقسام</option>';
+ S.cats.forEach(function(c,i){h+='<option value="'+i+'"'+(i===filt?' selected':'')+'>'+esc(c.n)+'</option>'});
+ h+='</select>';
+ var L=S.exp.filter(function(e){return e.d.indexOf(cur)===0&&(filt<0||e.c===filt)}).sort(function(a,b){return a.d<b.d?1:-1});
+ if(!L.length)h+='<p class="mu">لا توجد مصروفات.</p>';
+ var stT={paid:'تم الشراء والدفع',need:'مطلوب شراؤه',unpaid:'تم الشراء ولم يُدفع'},pT={must:'ضروري',imp:'مهم',late:'يمكن تأجيله'};
+ L.forEach(function(e){var c=S.cats[e.c]||{n:'',i:''};
+  h+='<div class="it"><div class="t"><span>'+esc(e.n)+'</span><span>'+fmt(tot(e))+'</span></div><div class="mu">'+e.d+' · '+c.i+' '+esc(c.n)+(e.s?' › '+esc(e.s):'')+'</div><div class="mu">'+esc(e.w)+' · '+e.q+' × '+fmt(e.p)+(e.store?' · '+esc(e.store):'')+'</div><div class="mu">'+pT[e.pri]+' · '+stT[e.st]+(e.note?' · '+esc(e.note):'')+'</div><button class="btn s" data-d="'+e.id+'">حذف</button></div>'});
+ h+='</div>';$('v-list').innerHTML=h;
+ $('fc').onchange=function(){filt=+this.value;list()};
+ [].forEach.call(document.querySelectorAll('[data-d]'),function(b){b.onclick=function(){if(b.dataset.s){S.exp=S.exp.filter(function(e){return e.id!=b.dataset.d});save();draw()}else{b.dataset.s=1;b.textContent='تأكيد الحذف؟'}}});
+}
+
+function openForm(ci){
+ var h='<h2>إضافة مصروف جديد</h2><label>القسم الرئيسي</label><select id="fcat">';
+ S.cats.forEach(function(c,i){h+='<option value="'+i+'"'+(i===ci?' selected':'')+'>'+esc(c.n)+'</option>'});
+ h+='</select><label>التصنيف الفرعي (اختياري)</label><select id="fsub"></select>'
+ +'<label>اسم الصنف أو المشتريات</label><input id="fn" placeholder="مثال: منظف ملابس أو دواء">'
+ +'<label>المستفيد</label><select id="fw">'+S.who.map(function(w){return'<option>'+esc(w)+'</option>'}).join('')+'</select>'
+ +'<div class="grid2"><div><label>الكمية</label><input id="fq" type="number" inputmode="decimal" value="1"></div><div><label>سعر الوحدة (د.ل.)</label><input id="fp" type="number" inputmode="decimal" placeholder="0.00"></div></div>'
+ +'<div class="tot"><span class="mu">الإجمالي المحسوب</span><b id="ft">0.00 د.ل.</b></div>'
+ +'<label>تاريخ المصروف</label><input id="fd" type="date" value="'+today()+'">'
+ +'<label>المتجر أو الصيدلية</label><input id="fs" placeholder="اختياري">'
+ +'<label>ملاحظات</label><input id="fo" placeholder="اختياري">'
+ +'<label>الأولوية</label><div class="rd"><input type="radio" name="pri" value="must" checked> ضروري</div><div class="rd"><input type="radio" name="pri" value="imp"> مهم</div><div class="rd"><input type="radio" name="pri" value="late"> يمكن تأجيله</div>'
+ +'<label>حالة المشتريات</label><div class="rd"><input type="radio" name="st" value="paid" checked> تم الشراء والدفع</div><div class="rd"><input type="radio" name="st" value="need"> مطلوب شراؤه</div><div class="rd"><input type="radio" name="st" value="unpaid"> تم الشراء ولم يُدفع</div>'
+ +'<br><button class="btn" id="fok">إنشاء سجل المصروف</button><br><button class="btn s" id="fx">إغلاق</button>';
+ $('form').innerHTML=h;$('sheet').style.display='block';
+ function subs(){$('fsub').innerHTML='<option value="">—</option>'+S.cats[+$('fcat').value].s.map(function(s){return'<option>'+esc(s)+'</option>'}).join('')}
+ function calc(){$('ft').textContent=fmt($('fq').value*$('fp').value)}
+ subs();$('fcat').onchange=subs;$('fq').oninput=calc;$('fp').oninput=calc;
+ $('fx').onclick=function(){$('sheet').style.display='none'};
+ $('fok').onclick=function(){var n=$('fn').value.trim();if(!n||!(+$('fp').value>=0)||$('fp').value===''){$('fn').focus();return}
+  S.exp.push({id:Date.now(),c:+$('fcat').value,s:$('fsub').value,n:n,w:$('fw').value,q:+$('fq').value||1,p:+$('fp').value,d:$('fd').value,store:$('fs').value.trim(),note:$('fo').value.trim(),
+   pri:document.querySelector('[name=pri]:checked').value,st:document.querySelector('[name=st]:checked').value});
+  save();$('sheet').style.display='none';draw()};
+}
+
+function go(v){view=v;['dash','cats','list'].forEach(function(k){$('v-'+k).classList.toggle('hide',k!==v)});
+ [].forEach.call(document.querySelectorAll('nav [data-v]'),function(b){b.classList.toggle('on',b.dataset.v===v)});draw()}
+function draw(){if(view==='dash')dash();else if(view==='cats')cats();else list()}
+$('mon').value=cur;$('mon').onchange=function(){if(this.value){cur=this.value;draw()}};
+[].forEach.call(document.querySelectorAll('nav [data-v]'),function(b){b.onclick=function(){go(b.dataset.v)}});
+$('addb').onclick=function(){openForm(selCat>=0?selCat:0)};
+draw();
+var PW='0912221922';
+function tryUnlock(){if($('pw').value===PW){$('lock').style.display='none'}else{$('pe').textContent='كلمة السر غير صحيحة';$('pw').value=''}}
+$('pwb').onclick=tryUnlock;$('pw').onkeydown=function(e){if(e.key==='Enter')tryUnlock()};
+</script>
+</body>
+</html>
